@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,600;0,700;1,100;1,300;1,500;1,600;1,700&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+*{   /* para tirar de todos os elementos */ 
+    margin: 0;
+    padding: 0;
+    list-style: none; /* tirar os pontin da lista */
+    text-decoration: none; /*tirar sublinhado dos links */
+}
+.hamburguer{
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 100;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.line{
+    width: 100%;
+    background-color: #fff;
+    height: 3px;
+    box-shadow: 0.1rem 0.1rem 1px #000;
+
+}
+header{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; /* caso o elemento seja maior que a tela, não irá ter um barra de rolagem */ 
+    position: relative;
+}
+
+
+.img-wrapper{
+    width: 100%;
+    height: 100%;
+    
+    background-color: rgba(0,0,0,0.9);
+    animation: zoom 25s;
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(1.3);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.img-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; T/* vai fazer com q essa imagem cubra a nossa div*/
+    opacity: 0.5;
+    
+}
+.banner{
+    position: absolute; /* para o absolute funcionar, ele precisar estar dentro de um elemento que seja relativo*/
+    top: 30%;
+    left: 15%;
+    width: 75%;
+}
+.banner h1{
+    color: #ffffff;
+    font-size: 3.5rem;
+    font-family: "Baloo Da 2", serif;
+    font-weight: 200; /* diminuir o peso = negrito*/
+    text-shadow: .3rem .4rem  2px rgba(0,0,0, .4);
+    line-height: 3.5rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: movebanner 1s 0.3s forwards;
+}
+.banner p{
+    font-family:"Josefin Slab", Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 2rem;
+    text-shadow: .3rem .4rem  2px rgba(0,0,0, .4);
+    margin-bottom: 2rem;
+    animation: movebanner 1s 0.5s forwards;
+    opacity: 0;
+}
+.banner button{
+    font-family: "Mulish",serif;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .1rem; /* afastamento de letra*/
+    background: #4e54c8;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8f94fb, #4e54c8);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #8f94fb, #4e54c8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    animation: movebanner 1s 0.9s forwards;
+    opacity: 0;
+}
+
+
+@keyframes movebanner{
+    0%{
+        transform: translateY(10rem) rotateY(-30deg); /*translateY Pra fazer com que a fonte desça uns 10px */
+    }
+    100%{
+        transform: translateY(0) rotateY(0); /* e que depois ela suba e que  nesse meio terma tenha uma animação  */
+        opacity: 1;
+    }
+}
+.sidebar{
+    width: 20rem;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;/* quero que meu elemento fique fixado ao rolar */ 
+    top: 0; /*a posição dele vai ser no eixo Y 0 ou seja, em cima na esquerda */
+    right:-20rem;
+    transition: all 1s;
+}
+.menu{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 65%;
+}
+.sidebar.show-menu{
+    right: 0;
+}
+.menu-item{
+    text-align: center;
+    margin-bottom: 0.7rem;
+    
+}
+.menu-link{
+    font-family:"mulish", serif;
+    font-size: 2rem;
+    color: #555;
+}
+.menu-link:hover{
+    color: rgb(76, 98, 167);
+}
+.social-media{
+    position: absolute;
+    bottom: 2rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly
+}
+.social-media i{
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 2.0rem;
+    background-color: rgba(24, 19, 19, 0.76);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+
+}
+.social-media i:hover{
+    background-color: royalblue;
+    transition: 0.3s  ;
+
+}
+.projetos{
+    display: flex;
+    justify-content: space-around;
+    
+  
+}
+.card{
+    width: 25rem;
+    height: 40rem;
+    
+}
+.card-img-wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+.card-img-wrapper img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        margin-top: 5rem;
+        border-radius: 10px;
+        box-shadow: -3px -3px 2px rgba(255,255,255,0.3),
+                    20px 15px 10px rgba(0,0,0,0.2),
+                    20px 20px 20px  rgba(0,0,0,0.2)
+       
+}
+
+
+.sessao-header{
+    text-align: center;
+    
+}
+.sessao-header h1{
+    text-align: center;
+    font-size: 8rem;
+    color: rgb(66, 47, 46);
+    text-shadow: 6px 2px rgb(35, 140, 182);
+    font-family:"Baloo Da 2", serif;
+    
+    
+}
+.card-info{
+    margin-top: -25rem;
+    text-shadow: 0  0.1rem 0.3rem rgba(0,0,0,.4);
+    padding-left: 2rem;
+
+}
+.card-info h2{
+    font-size: 2rem;
+    font-family:"Baloo Da 2", serif;
+    color: #fff;
+    text-shadow: 1px 2px rgb(14, 14, 15);
+    font-weight: 500; 
+}
+.card-info h3{
+    font-family:"Josefin Slab", Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: #fdf5f8;
+    text-shadow: 2px 1px rgb(202, 7, 7);
+    margin-bottom: 1.5rem;
+}
+.card-info p{
+    font-family: "mulish",Arial, Helvetica, sans-serif;
+    color: rgb(248, 245, 245);
+    font-weight:400;
+    width: 80%;
+    text-shadow: 1px 1px black;
+    margin-bottom: 2rem;
+    
+}
+.cu{
+    margin-top: 200rem;
+}
+.card-info button{
+    width: 8rem;
+    height: 2.5rem;
+    background: #4e54c8;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8f94fb, #4e54c8);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #8f94fb, #4e54c8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ ;
+    border-radius: 8px;
+    font-family: "mulish",Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: #eee;
+    box-shadow: 0 .1rem .8rem rgba(0,0,0, .4);
+    border: none;
+    cursor: pointer;
+}
+
+
+footer{
+    background-color: rgb(31, 14, 14);
+    margin-top: 30rem;
+    height: 8rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-content{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-content p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: seashell;
+    font-size: 1.2rem;
+}
+.social-list a{
+    margin: 0 2rem;
+    color: seashell;
+    font-size: 2rem;
+}
+.social-list ul {
+    display: flex;    
+}
+.manchetes{
+    margin-top: 40rem;
+}
+.manchetes h2{
+    display:list-item
+}
+.flex img{
+    
+    height: 20rem;
+    width: 30rem;
+    border-radius: 10px;
+    
+}
+.flex{
+    display: flex;
+    margin-top: 50rem;
+    flex-wrap: wrap;
+    max-width: 1576px;
+    margin: 0 auto;
+    margin-top: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+    
+    
+}
+.flex  > div{
+    flex: 1 1 300px;
+    margin: 150px;
+  
+    
+    
+}
+.flex p{
+    color: rgb(73, 71, 71);
+    text-align: justify;
+    font-size: 18px;
+    font-family: "mulish", Arial, Helvetica, sans-serif;
+}   
+.flex h2{
+    font-size: 23px;
+    margin-bottom: 20px;
+    font-family: "Baloo Da 2", serif;
+}
+.backadobe{
+    background: #fcfaf9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
+}

@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;  
+    box-sizing: border-box; 
+    max-width: 1920px;
+}
+ul {
+    text-align: center;
+}
+#menu-h ul{
+    background-color: rgba(32, 32, 31, 0.89);
+    list-style: none;
+    padding: 0px;
+}
+
+#menu-h ul li{
+    display: inline;
+}
+#menu-h ul li a{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 25px;
+    font-size: 18px;
+    text-shadow: 1px 2px  black;
+    transition: background .3s;
+}
+#menu-h ul  li a:hover{
+    background-color: rgb(164, 113, 212);
+    
+}
+#menu-h ul  li:last-child a{
+    float: right;
+    background-color: rgb(164, 113, 212);
+}
+#menu-h p{
+    font-size: 16px;
+    padding: 0;
+}

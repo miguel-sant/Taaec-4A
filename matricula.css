@@ -1,0 +1,113 @@
+body{
+	font-family: Roboto;
+	
+	background-repeat: none;
+}
+
+.formulario{
+    /*	background-color: #6600FF;*/  /* comando  pra cor */
+    	background-opacity: 0%;
+		max-width: 700px;   /* tamanho do quadrado branco*/
+		width: 98%;      /* O width atributo especifica a largura do elemento, em pixels. */ 
+		padding: 20px;  /* dimensão  da cor branca */
+		position: absolute; /* comando de posicionamento */
+		left: 50%;  /* comando para centralização */
+		top: 50%;   /* comando para centralização */
+		transform: translate(-50%, -50%); /* comando para centralização */
+	/*	border: 2px solid #ccc; /* comando para engrossar a borda da caixa de texto */
+		border-radius: 10px;
+		height: 80%;
+}
+
+.caixinhas{
+
+		border-radius: 10px;   /* deixa o botão e as bordas  mais  arredondado*/
+		padding-right: -10px;
+		width: 98%;
+    	height: 22px;    /* aumenta o tamanho da caixinha de texto */
+      	border: 3px solid #ccc; /* comando para engrossar a borda da caixa de texto */
+      	margin: 5px;
+      	color: black;
+      	border: 2px solid #ccc;
+}
+
+.butao{
+		
+		width: 100%;
+		cursor: pointer;
+		text-overflow: color: red;
+		font-size: 18px;
+		border-radius: 10px;
+		margin: center;
+
+
+}
+
+.butao:hover{
+		background-color: white;
+		border-radius: 10px;
+
+}
+
+h1{
+		text-align: center;
+		background-color: #6699FF;
+		align-self: center;
+		color: black;
+		font-family: Comic-Sans;
+		font-size: 23px;
+		border-radius: 10px;
+}
+
+h2{
+	background-color: #6699FF;
+	color: white;
+	text-align: center;
+/*	text-shadow: 10px 10px 10px;	*/
+	border-radius: 10px;
+	left: 50%;
+	top: 50%;
+
+}
+
+p{
+	color: black;
+	border: 2px solid #ccc;
+	background-color: white;
+	border-radius: 10px;
+	width: 105%;
+	padding-top: 2px;
+}
+
+.footerzinho{
+	
+	background-color: #CCFF;
+	margin-left: 6%;
+	text-decoration: none;
+	text-overflow: underline;
+	color: black;
+	border-radius: 6px;
+}
+.footerzinho h3{
+	text-align: center;
+}
+
+.links{
+	
+	text-align: center;
+	text-decoration: none;
+	text-overflow: underline;
+/*	color: #6699FF;	*/
+	color: black;
+	cursor: pointer;
+	margin-left: 5%; 
+}
+.links:hover{
+	color: black;
+	background-color: white;
+	border-radius: 6px;
+}
+
+.selecao{
+	cursor: pointer;
+}

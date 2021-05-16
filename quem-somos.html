@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Menu.css">
+    <title>Document</title>
+</head>
+<style>
+    *{margin:0;padding:0;box-sizing: border-box;}
+    body{
+        background:#ebedf0;
+    
+    }
+    form{
+        background-color: white;
+        max-width: 750px; 
+        width: 70%;
+        padding: 20px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid #dadce0;
+        border-radius: 10px;    
+        
+    }
+    form h1{
+        text-align: center;
+        font-family:'Times New Roman', Times, serif
+        font-size: 24px;
+        color:black
+        text-shadow: 2px 1px gray;
+    }
+    form h2{
+        color:black;
+        text-shadow: 1px 1px gray;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding-left: 6px;
+        }
+    form input[type="text"]{
+        width: 35%;
+        height: 35px;
+        padding-left: 8px;
+        margin: 6px 6px;
+        border-radius: 7px;
+    }
+    form input[type="password"]{
+        width: 35%;
+        height: 35px;
+        padding-left: 8px;
+        margin: 6px 6px;
+        border-radius: 7px 7px;
+        border
+        
+    }
+    form div{
+        width: 207%;
+        height: 30px;
+        
+    }
+    form p{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        color: #5f6368;
+        padding-left: 14px;
+        
+    }
+    span {
+        color: #5f6368;
+        padding-right: 65px;
+    }
+    form button[type="submit"]{
+        width: 110px;
+        height: 35px;
+        border-color:rgb(174, 101, 241);
+        border-radius: 6px;
+        background-color: rgb(174, 101, 241);
+        color: white;
+        cursor:pointer; 
+        font-size: 14px;
+        text-align: center;
+    }
+    img {
+        margin: 16px 0px 0px 0px;
+        padding-right: 15px;
+    }
+    a{
+        padding-left: 8px;
+    }
+    header{
+        background-color: teal;
+        width: 100%;
+        height:  115px;
+        font-family: inherit;
+        color: white;
+        text-shadow: 2px 1px black;
+        font-size: 25px;
+        margin: 0 auto;   
+    }
+    header h1{
+        padding-left: 152px;
+    }
+    form button{
+    
+    }
+</style>
+<body>
+    <nav id="menu-h">
+        <ul>
+            <li><a href="https://www.instagram.com">Home</a></li>
+            <li><a href="https://www.instagram.com">Sobre</a></li>
+            <li><a href="https://www.instagram.com">Quem somos</a></li>
+            <li><a href="https://www.instagram.com">Contato</a></li>
+            <li id="botao"><a href="https://www.instagram.com">Entrar</a></li>
+        </ul>
+        
+    </nav>
+    <form action="" method="post"> <!--method  post serve pra ocultar os dados no link-->
+        <h1> Cadastro único</h1>
+       <br> <img src="google-logo.png" alt="Logo HTML"
+        width="155px" height=" 115px">
+        <br><br><h2> Crie sua Conta do Negócio</h2>
+        <br><br><input type="text" name="nome" placeholder="Digite seu nome"/>
+        <input type="text" name="sobrenome" placeholder="Digite seu sobrenome"/>
+        <p>você pode usar letras, números e pontos finais</p>
+        <div> <br><input class="email" type="text" name="email" placeholder="Digite seu email"/><span>@Yahoo.com</span></div>
+        <br> <br> <br><input type="password" name="senha" placeholder="Senha"/>
+        <input type="password" name="senha confirmar" placeholder="Confirmar"/>
+        <p>Use oito ou mais caracteres com uma combinação de letras, números e símbolos</p>
+        <br><a href="https://www.google.com.br">Esqueceu sua senha?</a>
+
+        
+        
+        
+        <br> <br> <br> <br><br><button type="submit">Cadastrar</button>
+    
+    </form>
+</body>
+</html>
